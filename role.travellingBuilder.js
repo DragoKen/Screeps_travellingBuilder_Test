@@ -3,8 +3,8 @@ var roleUpgrader = require ('role.upgrader');
 module.exports = {
     run:function (creep) {
 
-        var destination = 'W43N8';
-        var homeBase = 'W43N9';
+        var destination = '/*Change this to your destination (duh!)*/';
+        var homeBase = '/*Change this to your Spawn1 room*/';
 
 
         if (creep.memory.working == true && creep.carry.energy == 0) {
