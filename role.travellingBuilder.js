@@ -31,7 +31,7 @@ module.exports = {
         }
         if (creep.memory.working == true && creep.room.name != homeBase)
         {
-            creep.moveTo(creep.pos.findClosestByPath(creep.room.findExitTo(homeBase)));
+            creep.moveTo(homeBase);
         }
 
         if (creep.room.name == destination && creep.memory.working == false)
@@ -43,7 +43,7 @@ module.exports = {
         }
         if (creep.room.name != destination && creep.memory.working == false)   // Move to source room
         {
-            creep.moveTo(creep.pos.findClosestByPath(creep.room.findExitTo(destination)));
+            creep.moveTo(destination);
         }
     }
 }
