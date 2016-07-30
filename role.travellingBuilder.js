@@ -31,19 +31,19 @@ module.exports = {
         }
         if (creep.memory.working == true && creep.room.name != homeBase)
         {
-            creep.moveTo(homeBase);
+            creep.moveTo(Game.spawns.Spawn1);
         }
 
-        if (creep.room.name == destination && creep.memory.working == false)
+        if (creep.room.name == resourceRoom && creep.memory.working == false)
         {
             var source = creep.pos.findClosestByPath(FIND_SOURCES_ACTIVE);
             if (creep.harvest(source) == ERR_NOT_IN_RANGE) {
                 creep.moveTo(source);
             }
         }
-        if (creep.room.name != destination && creep.memory.working == false)   // Move to source room
+        if (creep.room.name != resourceRoom && creep.memory.working == false)   // Move to source room
         {
-            creep.moveTo(destination);
+            creep.moveTo(Game.flags.Flag1);
         }
     }
 }
